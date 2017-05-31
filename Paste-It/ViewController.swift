@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let copies = ["yo", "how you doing", " Im aiiiigggggghhhhhhhhhhhhhhhhhhhhhhhhht"]
+    var copies = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,16 +20,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        /*
-        UserDefaults.standard.set(copies, forKey: "copies")
+        
+        //UserDefaults.standard.set(copies, forKey: "copies")
         
         let arrayOfCopies = UserDefaults.standard.value(forKey: "copies")
         
-        guard let myCopies = arrayOfCopies as? [String] else {
-            return
-        }
-        */
+        if arrayOfCopies == nil{
+            print("papa")
+        } else {
+            
         
+        
+            guard let myCopies = arrayOfCopies as? [String] else {
+                return
+            }
+        
+            copies = myCopies
+            
+        }
     }
     
     // MARK: - Table view data source
@@ -75,8 +83,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let alert = UIAlertController(title: "New Message", message: nil, preferredStyle: .alert)
         
         let okButton = UIAlertAction(title: "Ok", style: .default) { (action) in
-            print(alert.textFields?[0].text ?? "ok")
             
+            if let newMessage = alert.textFields?[0].text{
+                self.copies.append(newMessage)
+                UserDefaults.standard.set(self.copies, forKey: "copies")
+                self.tableView.reloadData()
+            }
         }
         
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel) { (cool) in
