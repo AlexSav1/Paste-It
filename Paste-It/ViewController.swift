@@ -14,27 +14,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        //UserDefaults.standard.set(copies, forKey: "copies")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let arrayOfCopies = UserDefaults.standard.value(forKey: "copies")
         
         if arrayOfCopies == nil{
             print("no user defaults")
         } else {
-        
+            
             guard let myCopies = arrayOfCopies as? [String] else {
                 return
             }
-        
+            
             copies = myCopies
             
         }
+        
+        tableView.reloadData()
+        
     }
     
     // MARK: - Table view data source
@@ -57,6 +65,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print(indexPath.row)
         
         UIPasteboard.general.string = copies[indexPath.row]
+        
+        let alert = UIAlertController(title: "Copied!", message: nil, preferredStyle: .alert)
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
+            alert.dismiss(animated: true, completion: nil)
+        }
+    
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
@@ -80,7 +97,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    //MARK: Button Actions
+    //MARK: - Button Actions
     
     func showTextDetail(sender: UIButton){
         
@@ -125,8 +142,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let vc = segue.destination as! DetailsViewController
         
         vc.copyText = sender as? String
+        vc.copies = copies
         
     }
+    
+
     
 }
 

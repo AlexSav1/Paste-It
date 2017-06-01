@@ -14,6 +14,8 @@
 		AAE1CEE01EDF2EF300D73A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE1CEDE1EDF2EF300D73A6F /* LaunchScreen.storyboard */; };
 		AAE1CEE81EDF3F9700D73A6F /* PasteItTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1CEE71EDF3F9700D73A6F /* PasteItTableViewCell.swift */; };
 		AAE1CEEA1EDF4AEE00D73A6F /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1CEE91EDF4AEE00D73A6F /* DetailsViewController.swift */; };
+		AAE1CEED1EE0705300D73A6F /* PopUpAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1CEEB1EE0705300D73A6F /* PopUpAlertController.swift */; };
+		AAE1CEEE1EE0705300D73A6F /* PopUpAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAE1CEEC1EE0705300D73A6F /* PopUpAlertController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		AAE1CEE11EDF2EF300D73A6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAE1CEE71EDF3F9700D73A6F /* PasteItTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteItTableViewCell.swift; sourceTree = "<group>"; };
 		AAE1CEE91EDF4AEE00D73A6F /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AAE1CEEB1EE0705300D73A6F /* PopUpAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpAlertController.swift; sourceTree = "<group>"; };
+		AAE1CEEC1EE0705300D73A6F /* PopUpAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpAlertController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				AAE1CEE71EDF3F9700D73A6F /* PasteItTableViewCell.swift */,
 				AAE1CED91EDF2EF300D73A6F /* Main.storyboard */,
 				AAE1CEE91EDF4AEE00D73A6F /* DetailsViewController.swift */,
+				AAE1CEEB1EE0705300D73A6F /* PopUpAlertController.swift */,
+				AAE1CEEC1EE0705300D73A6F /* PopUpAlertController.xib */,
 				AAE1CEDC1EDF2EF300D73A6F /* Assets.xcassets */,
 				AAE1CEDE1EDF2EF300D73A6F /* LaunchScreen.storyboard */,
 				AAE1CEE11EDF2EF300D73A6F /* Info.plist */,
@@ -130,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE1CEE01EDF2EF300D73A6F /* LaunchScreen.storyboard in Resources */,
+				AAE1CEEE1EE0705300D73A6F /* PopUpAlertController.xib in Resources */,
 				AAE1CEDD1EDF2EF300D73A6F /* Assets.xcassets in Resources */,
 				AAE1CEDB1EDF2EF300D73A6F /* Main.storyboard in Resources */,
 			);
@@ -142,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE1CEED1EE0705300D73A6F /* PopUpAlertController.swift in Sources */,
 				AAE1CED81EDF2EF300D73A6F /* ViewController.swift in Sources */,
 				AAE1CEE81EDF3F9700D73A6F /* PasteItTableViewCell.swift in Sources */,
 				AAE1CED61EDF2EF300D73A6F /* AppDelegate.swift in Sources */,
