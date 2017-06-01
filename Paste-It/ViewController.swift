@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorColor = UIColor(colorLiteralRed: 0.03, green: 0.25, blue: 0.6, alpha: 0.6)
         
     }
     
@@ -90,7 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 
         // Configure the cell...
-        
+        //cell.theLabel.font = UIFont(name: "attack of the cucumbers", size: 17)
         cell.theLabel.text = copies[indexPath.row]
         
         return cell

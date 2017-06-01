@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA853A521EE0A6D90087267C /* CATHSGBR.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AA853A511EE0A6D90087267C /* CATHSGBR.TTF */; };
+		AA853A541EE0A7120087267C /* attack of the cucumbers.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA853A531EE0A7120087267C /* attack of the cucumbers.ttf */; };
 		AAE1CED61EDF2EF300D73A6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1CED51EDF2EF300D73A6F /* AppDelegate.swift */; };
 		AAE1CED81EDF2EF300D73A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE1CED71EDF2EF300D73A6F /* ViewController.swift */; };
 		AAE1CEDB1EDF2EF300D73A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE1CED91EDF2EF300D73A6F /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA853A511EE0A6D90087267C /* CATHSGBR.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CATHSGBR.TTF; sourceTree = "<group>"; };
+		AA853A531EE0A7120087267C /* attack of the cucumbers.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "attack of the cucumbers.ttf"; sourceTree = "<group>"; };
 		AAE1CED21EDF2EF300D73A6F /* Paste-It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paste-It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE1CED51EDF2EF300D73A6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAE1CED71EDF2EF300D73A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				AAE1CEDC1EDF2EF300D73A6F /* Assets.xcassets */,
 				AAE1CEDE1EDF2EF300D73A6F /* LaunchScreen.storyboard */,
 				AAE1CEE11EDF2EF300D73A6F /* Info.plist */,
+				AA853A531EE0A7120087267C /* attack of the cucumbers.ttf */,
+				AA853A511EE0A6D90087267C /* CATHSGBR.TTF */,
 			);
 			path = "Paste-It";
 			sourceTree = "<group>";
@@ -137,7 +143,9 @@
 			files = (
 				AAE1CEE01EDF2EF300D73A6F /* LaunchScreen.storyboard in Resources */,
 				AAE1CEEE1EE0705300D73A6F /* PopUpAlertController.xib in Resources */,
+				AA853A521EE0A6D90087267C /* CATHSGBR.TTF in Resources */,
 				AAE1CEDD1EDF2EF300D73A6F /* Assets.xcassets in Resources */,
+				AA853A541EE0A7120087267C /* attack of the cucumbers.ttf in Resources */,
 				AAE1CEDB1EDF2EF300D73A6F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +325,7 @@
 				AAE1CEE61EDF2EF300D73A6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

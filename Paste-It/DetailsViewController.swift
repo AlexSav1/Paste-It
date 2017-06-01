@@ -24,13 +24,11 @@ class DetailsViewController: UIViewController {
 
     @IBAction func deletePressed(_ sender: Any) {
         
-        
         let index = copies.index(of: copyText!)
         copies.remove(at: index!)
         UserDefaults.standard.set(copies, forKey: "copies")
         
-        _ = self.navigationController?.popViewController(animated: true)
-        
+        _ = navigationController?.popViewController(animated: true)
         
     }
     
