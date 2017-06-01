@@ -20,16 +20,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        
         //UserDefaults.standard.set(copies, forKey: "copies")
         
         let arrayOfCopies = UserDefaults.standard.value(forKey: "copies")
         
         if arrayOfCopies == nil{
-            print("papa")
+            print("no user defaults")
         } else {
-            
-        
         
             guard let myCopies = arrayOfCopies as? [String] else {
                 return
@@ -52,6 +49,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return copies.count
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        UIPasteboard.general.string = copies[indexPath.row]
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
@@ -59,10 +70,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.detailButton.tag = indexPath.row
         cell.detailButton.addTarget(self, action: #selector(showTextDetail(sender:)), for: .touchUpInside)
-            //?? UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        
-        
+
         // Configure the cell...
         
         cell.theLabel.text = copies[indexPath.row]
@@ -70,10 +79,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    
+    //MARK: Button Actions
+    
     func showTextDetail(sender: UIButton){
         
         let textToShow = copies[sender.tag]
     
+        self.performSegue(withIdentifier: "showDetails", sender: textToShow)
+        
         print(sender.tag)
     }
     
@@ -105,14 +119,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true, completion: nil)
     }
 
-    /*
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc = segue.destination as! DetailsViewController
         
-        
+        vc.copyText = sender as? String
         
     }
-    */
+    
 }
 

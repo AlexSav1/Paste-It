@@ -10,14 +10,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
-    let copyText: String? = nil
+    var copyText: String?
     
     @IBOutlet weak var textLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textLabel.text = copyText
     }
 
 }
