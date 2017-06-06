@@ -14,15 +14,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    // MARK: - Life Cycle Methods
-    
+// MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Paste-It"
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = UIColor(colorLiteralRed: 0.03, green: 0.25, blue: 0.6, alpha: 0.6)
-        
+        //UIPasteboard.ge
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    // MARK: - Table view data source
+// MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
@@ -98,7 +99,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    //MARK: - Button Actions
+//MARK: - Button Actions
     
     func showTextDetail(sender: UIButton){
         
