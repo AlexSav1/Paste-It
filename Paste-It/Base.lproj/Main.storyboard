@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -121,7 +122,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-4u-OYY">
-                                <rect key="frame" x="164" y="354" width="46" height="30"/>
+                                <rect key="frame" x="164" y="427" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Delete">
                                     <color key="titleColor" red="1" green="0.3925250716" blue="0.30793751920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,21 +131,34 @@
                                     <action selector="deletePressed:" destination="3AM-og-d9s" eventType="touchUpInside" id="Q65-qn-udH"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="956-VA-KL8">
+                                <rect key="frame" x="16" y="115" width="343" height="244"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="244" id="5aj-2s-rUE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="leading" secondItem="f75-tG-Wz3" secondAttribute="leadingMargin" id="7Ht-JO-abI"/>
                             <constraint firstAttribute="trailing" secondItem="Ij5-Ld-BfL" secondAttribute="trailing" constant="10" id="RgC-S2-CAq"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="trailing" secondItem="f75-tG-Wz3" secondAttribute="trailingMargin" id="TXY-GE-dU6"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="top" secondItem="Ij5-Ld-BfL" secondAttribute="bottom" constant="84" id="dvg-sf-o1e"/>
                             <constraint firstItem="Ij5-Ld-BfL" firstAttribute="top" secondItem="j0H-Ix-0Td" secondAttribute="bottom" constant="10" id="kgf-If-JpW"/>
                             <constraint firstItem="Ij5-Ld-BfL" firstAttribute="leading" secondItem="f75-tG-Wz3" secondAttribute="leading" constant="10" id="l0g-WJ-FGd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textLabel" destination="Ij5-Ld-BfL" id="EBT-eE-CfP"/>
+                        <outlet property="textView" destination="956-VA-KL8" id="Thv-JL-WcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dk-Hc-PAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1938" y="139"/>
+            <point key="canvasLocation" x="1936.8" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P4g-n1-T4l">
