@@ -14,15 +14,12 @@ class DetailsViewController: UIViewController {
     var copies = [String]()
     
     @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var textLabel: UILabel!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         textView.delegate = self
-        
-        textLabel.text = copyText
+    
         textView.text = copyText
     
     }
@@ -46,6 +43,17 @@ class DetailsViewController: UIViewController {
         
     }
     
+    @IBAction func actionButtonPressed(_ sender: Any) {
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let delete = UIAlertAction(title: "Delete", style: .destructive) { (Action) in
+            //delete string
+        }
+        
+        alert.addAction(delete)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension DetailsViewController: UITextViewDelegate {
