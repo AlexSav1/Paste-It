@@ -23,7 +23,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = UIColor(colorLiteralRed: 0.03, green: 0.25, blue: 0.6, alpha: 0.6)
-        //UIPasteboard.ge
+        
+        if let newString = UIPasteboard.general.string{
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,6 +112,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.performSegue(withIdentifier: "showDetails", sender: textToShow)
         
         print(sender.tag)
+    }
+    
+    
+    @IBAction func pasteButtonPressed(_ sender: Any) {
+        
+        if let newString = UIPasteboard.general.string{
+            copies.insert(newString, at: 0)
+            UserDefaults.standard.set(self.copies, forKey: "copies")
+            tableView.reloadData()
+        }
+        
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {

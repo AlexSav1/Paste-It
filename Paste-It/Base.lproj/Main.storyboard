@@ -92,6 +92,11 @@
                                 <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="bM4-FN-mHG"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Paste" id="8mC-fR-sZv">
+                            <connections>
+                                <action selector="pasteButtonPressed:" destination="BYZ-38-t0r" id="GDB-gB-jJS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qLE-qj-XEy" id="GoT-BY-vK8"/>
@@ -120,34 +125,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-4u-OYY">
-                                <rect key="frame" x="165" y="543" width="45" height="30"/>
-                                <state key="normal" title="Delete">
-                                    <color key="titleColor" red="1" green="0.3925250716" blue="0.30793751920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="deletePressed:" destination="3AM-og-d9s" eventType="touchUpInside" id="Q65-qn-udH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="956-VA-KL8" firstAttribute="height" secondItem="f75-tG-Wz3" secondAttribute="height" multiplier="0.8" id="bZh-SJ-2CC"/>
-                            <constraint firstItem="AT4-4u-OYY" firstAttribute="centerY" secondItem="f75-tG-Wz3" secondAttribute="centerY" multiplier="1.85" id="dyR-OH-OLu"/>
-                            <constraint firstItem="AT4-4u-OYY" firstAttribute="centerX" secondItem="f75-tG-Wz3" secondAttribute="centerX" id="iWB-Fd-Jqh"/>
                             <constraint firstAttribute="trailing" secondItem="956-VA-KL8" secondAttribute="trailing" constant="15" id="oyE-Pn-6ne"/>
                             <constraint firstItem="956-VA-KL8" firstAttribute="leading" secondItem="f75-tG-Wz3" secondAttribute="leading" constant="15" id="rgV-sk-iqf"/>
                             <constraint firstItem="956-VA-KL8" firstAttribute="top" secondItem="j0H-Ix-0Td" secondAttribute="bottom" constant="15" id="sEe-bq-g3w"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Paste-It" id="p2a-7t-58U">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="VFK-ej-F6O">
+                        <barButtonItem key="rightBarButtonItem" title="Delete" id="VFK-ej-F6O">
+                            <color key="tintColor" red="1" green="0.3925250716" blue="0.30793751920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="actionButtonPressed:" destination="3AM-og-d9s" id="NtT-v3-NHY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionButton" destination="VFK-ej-F6O" id="V6p-Sq-8sZ"/>
                         <outlet property="textView" destination="956-VA-KL8" id="Thv-JL-WcN"/>
                     </connections>
                 </viewController>
