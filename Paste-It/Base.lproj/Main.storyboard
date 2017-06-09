@@ -119,19 +119,26 @@
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clipboard-34693_960_720" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-Sm-3II">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="956-VA-KL8">
-                                <rect key="frame" x="15" y="15" width="345" height="482.5"/>
+                                <rect key="frame" x="15" y="81.5" width="334" height="482"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="attackofthecucumbers" family="attack of the cucumbers" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="956-VA-KL8" firstAttribute="height" secondItem="f75-tG-Wz3" secondAttribute="height" multiplier="0.8" id="bZh-SJ-2CC"/>
-                            <constraint firstAttribute="trailing" secondItem="956-VA-KL8" secondAttribute="trailing" constant="15" id="oyE-Pn-6ne"/>
-                            <constraint firstItem="956-VA-KL8" firstAttribute="leading" secondItem="f75-tG-Wz3" secondAttribute="leading" constant="15" id="rgV-sk-iqf"/>
-                            <constraint firstItem="956-VA-KL8" firstAttribute="top" secondItem="j0H-Ix-0Td" secondAttribute="bottom" constant="15" id="sEe-bq-g3w"/>
+                            <constraint firstItem="xaq-Sm-3II" firstAttribute="top" secondItem="j0H-Ix-0Td" secondAttribute="bottom" id="HVw-iA-dYJ"/>
+                            <constraint firstItem="xaq-Sm-3II" firstAttribute="leading" secondItem="f75-tG-Wz3" secondAttribute="leading" id="J21-8d-cTm"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="height" secondItem="xaq-Sm-3II" secondAttribute="height" multiplier="0.8" id="SjF-FR-a5F"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="width" secondItem="xaq-Sm-3II" secondAttribute="width" multiplier="0.89" id="d5k-9t-XvG"/>
+                            <constraint firstItem="cuC-IU-elm" firstAttribute="top" secondItem="xaq-Sm-3II" secondAttribute="bottom" id="dco-Ol-izD"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="centerY" secondItem="f75-tG-Wz3" secondAttribute="centerY" multiplier="1.07" id="gag-8R-33x"/>
+                            <constraint firstAttribute="trailing" secondItem="xaq-Sm-3II" secondAttribute="trailing" id="heb-Bc-t8r"/>
+                            <constraint firstItem="956-VA-KL8" firstAttribute="centerX" secondItem="f75-tG-Wz3" secondAttribute="centerX" multiplier="0.97" id="up6-sc-yCj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Paste-It" id="p2a-7t-58U">
