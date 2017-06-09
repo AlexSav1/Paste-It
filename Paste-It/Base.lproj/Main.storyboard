@@ -43,20 +43,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00C-wF-J6Z">
-                                                    <rect key="frame" x="298" y="11" width="22" height="22"/>
+                                                    <rect key="frame" x="287.5" y="0.5" width="43.5" height="43.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="00C-wF-J6Z" secondAttribute="height" multiplier="1:1" id="q40-M7-QLm"/>
                                                     </constraints>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qc-3w-AEd">
-                                                    <rect key="frame" x="10" y="0.0" width="278" height="43"/>
+                                                    <rect key="frame" x="10" y="0.0" width="267.5" height="43"/>
                                                     <fontDescription key="fontDescription" name="attackofthecucumbers" family="attack of the cucumbers" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="00C-wF-J6Z" firstAttribute="height" secondItem="ZIP-Sf-DDC" secondAttribute="height" multiplier="0.5" id="1Tz-Yd-H8M"/>
+                                                <constraint firstItem="00C-wF-J6Z" firstAttribute="height" secondItem="ZIP-Sf-DDC" secondAttribute="height" id="1Tz-Yd-H8M"/>
                                                 <constraint firstAttribute="bottom" secondItem="1qc-3w-AEd" secondAttribute="bottom" id="4Pa-P2-Uci"/>
                                                 <constraint firstItem="1qc-3w-AEd" firstAttribute="top" secondItem="ZIP-Sf-DDC" secondAttribute="top" id="5SM-Wd-8N7"/>
                                                 <constraint firstItem="00C-wF-J6Z" firstAttribute="centerY" secondItem="ZIP-Sf-DDC" secondAttribute="centerY" id="9Ib-zS-bAN"/>

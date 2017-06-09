@@ -66,7 +66,7 @@ extension DetailsViewController: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         actionButton.title = "Save"
-        actionButton.tintColor = UIColor.blue
+        actionButton.tintColor = .blue
     }
     
     func textViewDidChange(_ textView: UITextView) {

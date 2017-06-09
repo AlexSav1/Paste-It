@@ -23,10 +23,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorColor = UIColor(colorLiteralRed: 0.03, green: 0.25, blue: 0.6, alpha: 0.6)
-        
-        if let newString = UIPasteboard.general.string{
-            
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,10 +59,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return copies.count
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         
@@ -82,8 +74,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            copies.remove(at: indexPath.row)
+            UserDefaults.standard.set(self.copies, forKey: "copies")
+            tableView.reloadData()
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,9 +109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func showTextDetail(sender: UIButton){
         
         let textToShow = copies[sender.tag]
-    
         self.performSegue(withIdentifier: "showDetails", sender: textToShow)
-        
         print(sender.tag)
     }
     
