@@ -97,7 +97,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 
         // Configure the cell...
-        //cell.theLabel.font = UIFont(name: "attack of the cucumbers", size: 17)
         cell.theLabel.text = copies[indexPath.row]
         
         return cell
